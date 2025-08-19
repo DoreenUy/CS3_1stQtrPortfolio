@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+    <h2> Q1 2nd Graded Exercise submitted by Doreen Uy of 9Magnesium</h2>
+
+    <footer>
+        <p>Uy, D.(2025).Third Non-Graded Exercise.public/Q1_1NGMgUy3.html</p>
+    </footer>
+
+    <label>Meal Price:
+    <input id="mp" />
+    </label><br/>
+
+    </label>Tip:
+        <input id="tip" />
+    </label></br/>
+
+    </label>Service Charge:
+    <input id="sc" />
+    </label></br/>
+   
+    <button onclick="totalMeal()"> Accept input </button> </p>
+
+    <p> Total Meal:
+        <span id="result">   </span>
+    </p>
+   
+    <script>
+        function totalMeal() {
+    let mp = document.getElementById("mp").value;
+    let tip = document.getElementById("tip").value;
+    let sc = document.getElementById("sc").value;
+    let totalCost = Number(mp) + Number(tip) + (sc / 100 * Number(mp));
+
+    document.getElementById("result").innerText = totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
